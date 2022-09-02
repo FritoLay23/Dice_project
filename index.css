@@ -1,0 +1,272 @@
+body{
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow-y: hidden;
+}
+
+.container{
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    top: 200px;
+    perspective: 600px;
+}
+
+.cube{
+    transform: translateY(0px) rotateY(0deg) translateX(0px) rotateX(0deg) translateZ(0px) rotateZ(0deg);
+    width: 200px;
+    height: 200px;
+    transform-style: preserve-3d;
+    transition: transform 2s;
+}
+
+.cube:hover{
+    transform: translateY(0px) rotateY(45deg) translateX(0px) rotateX(45deg) translateZ(0px) rotateZ(0deg);
+}
+
+.cube_face{
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-areas: 
+        "topleft top topright"
+        "middleleft middle middleright"
+        "downleft down downright";
+    padding: 10px;
+    row-gap: 2px;
+    background-color: #bb9191;
+    outline: black solid 2px;
+}
+
+.front{
+    transform: translateZ(110px);
+}
+
+.back{
+    transform: translateZ(-110px);
+}
+
+.right{
+    transform: rotateY(90deg) translateZ(110px);
+}
+
+.left{
+    transform: rotateY(90deg) translateZ(-110px);
+}
+
+.top{
+    transform: rotateX(90deg) translateZ(110px);
+}
+
+.down{
+    transform: rotateX(90deg) translateZ(-110px);
+}
+
+.botones{
+    outline: black solid 2px;
+    width: 10%;
+    height: auto;
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    padding: 10px 0;
+    row-gap: 10px;
+    position: absolute;
+    top: 495px;
+    left: 86%;
+}
+
+.boton{
+    width: 80px;
+    height: 30px;
+    border: none;
+    border-radius: 5px;
+    background-color: #bb9191;
+    color: #fff;
+}
+
+.boton:hover{
+transform: scale(1.1);
+transition: transform 0.3s;
+}
+
+@keyframes anima{
+    0%{
+        transform: translateY(0px);
+    }
+    100%{
+        transform: translateY(300px);
+    }
+}
+
+@keyframes amina{
+    0%{
+        transform: translateY(300px);
+    }
+    100%{
+        transform: translateY(0px);
+    }
+}
+
+.ocultar{
+    animation: anima 1s;    
+}
+
+.mostrar{
+    animation: amina 1s;    
+}
+
+.durar{
+    visibility: hidden;    
+}
+
+.container_2{
+    outline: black solid 2px;
+    width: 55%;
+    height: auto;
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    padding: 20px 0;
+    row-gap: 10px;
+    position: relative;
+    top: 500px;
+}
+
+.faces{
+    width: 80px;
+    height: 80px;
+    background-color: #bb9191;
+    border-radius: 10px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-areas: 
+        "topleft top topright"
+        "middleleft middle middleright"
+        "downleft down downright";
+    padding: 10px;
+    row-gap: 2px;
+    transform: scale(1.05);
+}
+
+.faceOne:hover{
+    transition: transform 0.3s;
+    transform: scale(1.1);
+}
+
+.faceTwo:hover{
+    transition: transform 0.3s;
+    transform: scale(1.1);
+}
+.faceThree:hover{
+    transition: transform 0.3s;
+    transform: scale(1.1);
+}
+.faceFour:hover{
+    transition: transform 0.3s;
+    transform: scale(1.1);
+}
+.faceFive:hover{
+    transition: transform 0.3s;
+    transform: scale(1.1);
+}
+.faceSix:hover{
+    transition: transform 0.3s;
+    transform: scale(1.1);
+}
+
+.point{
+    background-color: #fff;
+    border-radius: 50%;
+    box-sizing: border-box;
+}
+
+.pointOne{
+    grid-area: middle;
+}
+
+.pointTwo_1{
+    grid-area: topright;
+}
+.pointTwo_2{
+    grid-area: downleft;
+}
+
+.pointThree_1{
+    grid-area: middle;
+}
+
+.pointThree_2{
+    grid-area: topright;
+}
+
+.pointThree_3{
+    grid-area: downleft;
+}
+
+.pointFour_1{
+    grid-area: topleft;
+}
+
+.pointFour_2{
+    grid-area: topright;
+}
+
+.pointFour_3{
+    grid-area: downleft;
+}
+
+.pointFour_4{
+    grid-area: downright;
+}
+
+.pointFive_1{
+    grid-area: topleft;
+}
+
+.pointFive_2{
+    grid-area: topright;
+}
+
+.pointFive_3{
+    grid-area: middle;
+}
+
+.pointFive_4{
+    grid-area: downleft;
+}
+
+.pointFive_5{
+    grid-area: downright;
+}
+
+.pointSix_1{
+    grid-area: topleft;
+}
+
+.pointSix_2{
+    grid-area: topright;
+}
+
+.pointSix_3{
+    grid-area: middleleft;
+}
+
+.pointSix_4{
+    grid-area: middleright;
+}
+
+.pointSix_5{
+    grid-area: downleft;
+}
+
+.pointSix_6{
+    grid-area: downright;
+}

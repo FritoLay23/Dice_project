@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="index.css" />
+    <script defer src="./index.js"></script>
+    <title>Dados</title>
+  </head>
+  <body>  
+    <div class="container">
+      <div class="cube" id="cube_dice">
+        <div class="cube_face front">
+          <div class="point pointOne"></div>
+        </div>
+
+        <div class="cube_face back">
+          <div class="point pointSix_1"></div>
+          <div class="point pointSix_2"></div>
+          <div class="point pointSix_3"></div>
+          <div class="point pointSix_4"></div>
+          <div class="point pointSix_5"></div>
+          <div class="point pointSix_6"></div>
+        </div>
+
+        <div class="cube_face right">
+          <div class="point pointFour_1"></div>
+          <div class="point pointFour_2"></div>
+          <div class="point pointFour_3"></div>
+          <div class="point pointFour_4"></div>
+        </div>
+
+        <div class="cube_face left">
+          <div class="point pointThree_1"></div>
+          <div class="point pointThree_2"></div>
+          <div class="point pointThree_3"></div>
+        </div>
+
+        <div class="cube_face top">
+          <div class="point pointFive_1"></div>
+          <div class="point pointFive_2"></div>
+          <div class="point pointFive_3"></div>
+          <div class="point pointFive_4"></div>
+          <div class="point pointFive_5"></div>
+        </div>
+
+        <div class="cube_face down">
+          <div class="point pointTwo_1"></div>
+          <div class="point pointTwo_2"></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container_2" id="dices">
+      <div class="faces faceOne" onclick="faceClick(1)">
+        <div class="point pointOne"></div>
+      </div>
+
+      <div class="faces faceTwo" onclick="faceClick(2)">
+        <div class="point pointTwo_1"></div>
+        <div class="point pointTwo_2"></div>
+      </div>
+
+      <div class="faces faceThree" onclick="faceClick(3)">
+        <div class="point pointThree_1"></div>
+        <div class="point pointThree_2"></div>
+        <div class="point pointThree_3"></div>
+      </div>
+
+      <div class="faces faceFour" onclick="faceClick(4)">
+        <div class="point pointFour_1"></div>
+        <div class="point pointFour_2"></div>
+        <div class="point pointFour_3"></div>
+        <div class="point pointFour_4"></div>
+      </div>
+
+      <div class="faces faceFive" onclick="faceClick(5)">
+        <div class="point pointFive_1"></div>
+        <div class="point pointFive_2"></div>
+        <div class="point pointFive_3"></div>
+        <div class="point pointFive_4"></div>
+        <div class="point pointFive_5"></div>
+      </div>
+
+      <div class="faces faceSix" onclick="faceClick(6)">
+        <div class="point pointSix_1"></div>
+        <div class="point pointSix_2"></div>
+        <div class="point pointSix_3"></div>
+        <div class="point pointSix_4"></div>
+        <div class="point pointSix_5"></div>
+        <div class="point pointSix_6"></div>
+      </div>
+    </div>
+
+    <div class="botones">
+      <button class="boton" id="gtx">Ramdon</button>
+      <button class="boton" id="btnmusic">Music</button>
+      <button class="boton" id="btn">Panel</button>
+    </div>
+
+    <audio src="Tan Soldao.mp3" id="music" autoplay=""></audio>
+  </body>
+</html>
